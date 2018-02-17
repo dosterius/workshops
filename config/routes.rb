@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/test", to: proc { |e| [200, {}, ["ok"]]}
+
+  get "/users", to: "users#index"
+  get "/contact", to: "static_pages#contact"
+  get "/about", to: "static_pages#about_us"
+  get "/mission", to: "static_pages#mission"
 end
