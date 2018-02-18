@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get "/mission", to: "static_pages#mission"
   get "/kariera", to: "static_pages#kariera"
 
-  resources :orders
-  resources :users
+  resources :users do 
+    resources :orders
 
+				end
 end
