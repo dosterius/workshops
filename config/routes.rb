@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about_us"
   get "/mission", to: "static_pages#mission"
   get "/kariera", to: "static_pages#kariera"
+
+  resources :orders
+
+
 end
